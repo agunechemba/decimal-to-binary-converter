@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Portfolio Website</title>
+<style>
+   body {
+  background-color: lightpink;
+  text-align: center;
+}
+
+img {
+  margin: 0 auto;
+  display: block;
+}
+
+p {
+  margin: 0 auto;
+  width: 50%;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+input {
+  margin: 0 auto;
+  width: 50%;
+}
+
+button {
+  margin: 0 auto;
+  width: 50%;
+}
+</style>
+</head>
+<body>
+<img src="profilepicture.png" alt="Profile Picture" />
+<p>I am a Tech Training Specialist with a passion for training young learners like you. I am always learning new things and I am always looking for new challenges. I am excited to share my work with you and I hope you enjoy it!</p>
+<h2>Decimal to Binary Converter</h2>
+<p>Enter a decimal number to convert it to binary:</p>
+<input type="text" id="decimal_number" />
+<button onclick="convert()">Convert</button>
+<p id="binary_number"></p>
+<script>
+function convert() {
+  var decimal_number = parseInt(document.getElementById("decimal_number").value, 10);
+  var binary_number = "";
+  while (decimal_number > 0) {
+    binary_number = (decimal_number % 2) + binary_number;
+    decimal_number = Math.floor(decimal_number / 2);
+  }
+  document.getElementById("binary_number").innerHTML = binary_number;
+}
+
+</script>
+</body>
+</html>
+
